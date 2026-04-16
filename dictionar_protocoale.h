@@ -1,0 +1,32 @@
+#ifndef DICTIONAR_PROTOCOALE_H
+#define DICTIONAR_PROTOCOALE_H
+//TIPURI DE COMENZI
+#define COMANDA_LOGIN 1
+#define COMANDA_LOGOUT 2
+#define COMANDA_VITEZA 3
+#define COMANDA_RAPORTEAZA_ACCIDENT 4
+#define COMANDA_INFO_VREME 5
+#define COMANDA_INFO_SPORT 6
+#define COMANDA_INFO_PRETURI 7
+#define COMANDA_CERE_VECINI 20
+#define COMANDA_DEPLASARE 21
+//TIPURI DE RASPUNSURI
+#define SUCCES 101
+#define EROARE 102
+#define RASPUNS_VITEZA 103
+#define RASPUNS_ACCIDENT 104
+#define RASPUNS_INFO_VREME 105
+#define RASPUNS_INFO_SPORT 106
+#define RASPUNS_INFO_PRETURI 107
+#define RASPUNS_LISTA_VECINI 120
+#define RASPUNS_DEPLASARE_OK 121
+//Formatul mesajului, l-am facut cat mai generic posibil
+//pentru ca e si pt. client si pentru server
+typedef struct {
+    int tip;
+    int id_sursa;
+    char text[512];
+    float viteza;
+
+}pachet_generic;
+#endif
