@@ -20,8 +20,7 @@
 #define RASPUNS_INFO_PRETURI 107
 #define RASPUNS_LISTA_VECINI 120
 #define RASPUNS_DEPLASARE_OK 121
-//Formatul mesajului, l-am facut cat mai generic posibil
-//pentru ca e si pt. client si pentru server
+//FORMAT
 typedef struct {
     int tip;
     int id_sursa;
